@@ -132,7 +132,7 @@ elif args.timestamp:
         interval = 20
     else:
         interval = int(args.expected)
-    if int(data['state']) > time - interval:
+    if int(float(data['state'])) > time - interval:
         status = 0
         message = "Timestamp is {}".format(data['state'])
     else:
